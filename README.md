@@ -1,2 +1,7 @@
 # AWS-Book-Appointment
-A serverless appointment booking application built using AWS S3, CloudFront, API Gateway, Lambda (Python), and DynamoDB. Users can view available appointment slots and book appointments through a simple web interface.
+## Overview
+Book Appointment is a serverless web application that allows users to check appointment availability and book appointments through a simple and user-friendly interface.
+
+The application uses AWS services to handle appointment requests, process business logic, and store appointment details without managing traditional servers.
+
+Users can select an appointment date, view available time slots, enter their details, and submit a booking. The backend validates the request, checks existing appointments, and stores confirmed bookings in Amazon DynamoDB.
