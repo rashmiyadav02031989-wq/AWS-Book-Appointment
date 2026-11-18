@@ -24,3 +24,25 @@ Users can select an appointment date, view available time slots, enter their det
 - **Appointment Storage:** Stores appointment details in Amazon DynamoDB.
 - **HTTP Error Handling:** Returns appropriate status codes, including 400 (Bad Request), 404 (Not Found), 409 (Conflict), and 500 (Internal Server Error).
 ---
+
+## Architecture Diagram
+```mermaid
+
+flowchart TD
+    A["User / Web Browser"]
+    B["Amazon CloudFront"]
+    C["Amazon S3<br/>Static Website Files"]
+    D["Amazon API Gateway<br/>HTTP API"]
+    E["AWS Lambda<br/>Python Backend"]
+    F[("Amazon DynamoDB<br/>Appointment Table")]
+
+    A -->|"Access Website"| B
+    B -->|"Fetch Static Files"| C
+    A -->|"GET /availability<br/>POST /appointments"| D
+    D -->|"Invoke Lambda"| E
+    E -->|"Read / Write Data"| F
+    F -->|"Appointment Records"| E
+    E -->|"HTTP Response"| D
+    D -->|"JSON Response"| A
+
+```
