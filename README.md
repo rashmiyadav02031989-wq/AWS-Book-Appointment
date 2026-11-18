@@ -148,6 +148,71 @@ Verified that already-booked slots are rejected.
 ```
 
 
-### Future Enhancement
+## Screenshots
 
-Introduce a suitable composite key design and DynamoDB conditional writes to prevent duplicate bookings during simultaneous booking requests.
+### Website Homepage
+
+![Website Homepage](screenshots/homepage.png)
+
+### Upload-File
+
+![Add Task](screenshots/file_selected_hello.png)
+
+### File Upload Scuccessful
+
+![Add Task DynamoDB Table](screenshots/uploaded.png)
+
+### S3-Bucket-After-Upload
+
+![Mark Task Completed](screenshots/s3_bucket.png)
+
+### File-Upload-Completed-Dynamo-Table
+
+![Mark Task Completed Dynamo Table](screenshots/dynamo-table-uploaded.png)
+
+
+
+---
+
+## Repository Structure
+
+```text
+cloud-file-flow/
+├── lambda/
+│   └── cloud-file-flow-lambda.py
+├── screenshots/
+│   └── homepage.png
+│   └── file_selected_hello.png
+│   └── uploaded.png
+│   └── s3_bucket.png
+│   └── dynamo-table-uploaded.png
+|__ website/
+│   └── index.html
+│   └── script.js
+│   └── style.css
+├── README.md
+
+```
+## Security Best Practices
+
+* Implemented a serverless architecture to minimize infrastructure management.
+
+* Used API Gateway to provide an API endpoint for generating S3 presigned upload URLs.
+
+* Used presigned URLs to allow temporary, controlled access to upload files without exposing AWS credentials.
+
+* Configured CORS to allow browser requests from the frontend.
+
+* Used IAM roles and least-privilege permissions for AWS service access.
+
+* Stored file metadata in Amazon DynamoDB.
+
+* Used CloudFront to provide HTTPS delivery for the frontend.
+
+* Used Amazon SQS to decouple file uploads from asynchronous Lambda processing.
+
+* Used Amazon CloudWatch Logs to monitor Lambda execution and troubleshoot errors.
+
+---
+
+
