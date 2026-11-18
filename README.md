@@ -46,3 +46,21 @@ flowchart TD
     D -->|"JSON Response"| A
 
 ```
+## API Endpoints
+## API Endpoints
+
+| HTTP Method | Endpoint | Parameters | Description | Success Status |
+|---|---|---|---|---|
+| GET | `/availability` | `appointmentDate` (query parameter) | Retrieves available appointment slots for the selected date. | 200 OK |
+| POST | `/appointments` | `customerName`, `appointmentDate`, `appointmentTime` (JSON body) | Validates and books an appointment, then stores the details in DynamoDB. | 201 Created |
+
+### HTTP Status Codes
+
+| Status Code | Description |
+|---|---|
+| 200 | Availability retrieved successfully |
+| 201 | Appointment created successfully |
+| 400 | Missing or invalid input |
+| 404 | Requested route not found |
+| 409 | Appointment slot already booked |
+| 500 | Internal server error |
