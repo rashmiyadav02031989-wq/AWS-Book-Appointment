@@ -92,22 +92,27 @@ flowchart TD
 }
 ```
 ## Implementation Steps
-**Step 1:**  
+**Step 1:** 
+
 Created an S3 bucket to store the frontend HTML, CSS, and JavaScript files.
-**Step 2:**
+**Step 2:** 
+
 Created the Book-Appointment-Dynamo-Table.
 
 Configured appointmentId as the partition key.
-**Step 3:**
+**Step 3:** 
+
 Created BookAppointment-Lambda-Role.
 Configured the required permissions for Lambda to access DynamoDB.
-**Step 4:**
+**Step 4:** 
+
 Created the Book-Appointment-Lambda function using Python.
 
 Implemented appointment availability retrieval and booking logic.
 
 Added input validation and error handling.
-**Step 5:**
+**Step 5:** 
+
 Created an HTTP API in API Gateway.
 
 Configured the GET /availability and POST /appointments routes.
@@ -115,23 +120,28 @@ Configured the GET /availability and POST /appointments routes.
 Integrated both routes with the Lambda function.
 
 Configured CORS for frontend communication.
-**Step 6:**
+**Step 6:** 
+
 
 Uploaded the HTML, CSS, and JavaScript files to Amazon S3.
 
 Configured Amazon CloudFront to distribute the frontend content.
 
-**Step 7:**
+**Step 7:** 
+
 Connected the frontend JavaScript to API Gateway endpoints.
 
 Implemented availability retrieval and appointment booking requests.
 
-**Step 8:**
+**Step 8:** 
+
 Tested appointment availability retrieval.
 
 Tested successful appointment booking.
 
 Verified that already-booked slots are rejected.
+```
+
 
 ### Future Enhancement
 
