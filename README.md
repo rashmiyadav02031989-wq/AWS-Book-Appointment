@@ -11,3 +11,17 @@ Users can select an appointment date, view available time slots, enter their det
 ---
 
 ## Features
+## Features
+
+- **Appointment Availability:** View available appointment slots for a selected date.
+- **Appointment Booking:** Book an appointment by providing customer name, date, and time.
+- **One-Hour Time Slots:** Offers predefined one-hour appointment slots.
+- **Weekday Scheduling:** Supports Monday through Friday appointments.
+- **Lunch Break:** Excludes the 12:00 PM – 1:00 PM lunch period.
+- **Input Validation:** Validates required fields, appointment dates, and time slots.
+- **Duplicate Booking Check:** Checks existing appointments and prevents booking an already-occupied time slot.
+- **REST API Integration:** Uses API Gateway HTTP endpoints to communicate between the frontend and backend.
+- **Serverless Backend:** Processes booking requests using AWS Lambda and Python.
+- **Appointment Storage:** Stores appointment details in Amazon DynamoDB.
+- **HTTP Error Handling:** Returns appropriate status codes, including 400 (Bad Request), 404 (Not Found), 409 (Conflict), and 500 (Internal Server Error).
+---
