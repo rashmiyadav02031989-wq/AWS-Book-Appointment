@@ -95,6 +95,7 @@ flowchart TD
 **Step 1:** 
 
 Created an S3 bucket to store the frontend HTML, CSS, and JavaScript files. 
+
 **Step 2:** 
 
 Created the Book-Appointment-Dynamo-Table. 
