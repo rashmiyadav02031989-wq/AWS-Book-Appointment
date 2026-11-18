@@ -64,4 +64,32 @@ flowchart TD
 | 404 | Requested route not found |
 | 409 | Appointment slot already booked |
 | 500 | Internal server error |
+
 ## DynamoDB Table Design
+
+**Table Name:** `Book-Appointment-Dynamo-Table`
+
+| Attribute | Data Type | Key Type | Description |
+|---|---|---|---|
+| `appointmentId` | String | Partition Key (PK) | Unique identifier for each appointment |
+| `customerName` | String | Regular Attribute | Name of the customer |
+| `appointmentDate` | String | Regular Attribute | Selected appointment date (`YYYY-MM-DD`) |
+| `appointmentTime` | String | Regular Attribute | Selected appointment time |
+| `createdAt` | String | Regular Attribute | Timestamp indicating when the appointment was created |
+
+### Sample DynamoDB Item
+
+```json
+{
+  "appointmentId": "unique-appointment-id",
+  "customerName": "John",
+  "appointmentDate": "2026-11-20",
+  "appointmentTime": "10:00 AM",
+  "createdAt": "2026-11-18T15:30:00+00:00"
+}
+```
+## Implementation Steps
+
+### Future Enhancement
+
+Introduce a suitable composite key design and DynamoDB conditional writes to prevent duplicate bookings during simultaneous booking requests.
