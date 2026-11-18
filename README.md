@@ -101,10 +101,12 @@ Created an S3 bucket to store the frontend HTML, CSS, and JavaScript files.
 Created the Book-Appointment-Dynamo-Table. 
 
 Configured appointmentId as the partition key. 
+
 **Step 3:** 
 
 Created BookAppointment-Lambda-Role. 
 Configured the required permissions for Lambda to access DynamoDB. 
+
 **Step 4:** 
 
 Created the Book-Appointment-Lambda function using Python. 
@@ -112,6 +114,7 @@ Created the Book-Appointment-Lambda function using Python.
 Implemented appointment availability retrieval and booking logic. 
 
 Added input validation and error handling. 
+
 **Step 5:** 
 
 Created an HTTP API in API Gateway. 
@@ -121,8 +124,8 @@ Configured the GET /availability and POST /appointments routes.
 Integrated both routes with the Lambda function. 
 
 Configured CORS for frontend communication. 
-**Step 6:** 
 
+**Step 6:** 
 
 Uploaded the HTML, CSS, and JavaScript files to Amazon S3. 
 
