@@ -7,7 +7,7 @@ The application uses AWS services to handle appointment requests, process busine
 Users can select an appointment date, view available time slots, enter their details, and submit a booking. The backend validates the request, checks existing appointments, and stores confirmed bookings in Amazon DynamoDB.
 
 ---
-## Live Demo : [AWS-Book-Appointment](d3g2wddbbs0bqk.cloudfront.net)
+## Live Demo : [AWS-Book-Appointment](https://d3g2wddbbs0bqk.cloudfront.net)
 ---
 
 ## Features
