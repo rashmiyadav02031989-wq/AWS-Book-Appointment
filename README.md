@@ -105,6 +105,7 @@ Configured appointmentId as the partition key.
 **Step 3:** 
 
 Created BookAppointment-Lambda-Role. 
+
 Configured the required permissions for Lambda to access DynamoDB. 
 
 **Step 4:** 
