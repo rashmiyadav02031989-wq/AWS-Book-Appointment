@@ -11,7 +11,6 @@ Users can select an appointment date, view available time slots, enter their det
 ---
 
 ## Features
-## Features
 
 - **Appointment Availability:** View available appointment slots for a selected date.
 - **Appointment Booking:** Book an appointment by providing customer name, date, and time.
