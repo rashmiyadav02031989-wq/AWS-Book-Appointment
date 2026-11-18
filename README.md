@@ -46,7 +46,7 @@ flowchart TD
     D -->|"JSON Response"| A
 
 ```
-## API Endpoints
+
 ## API Endpoints
 
 | HTTP Method | Endpoint | Parameters | Description | Success Status |
@@ -68,6 +68,9 @@ flowchart TD
 ## DynamoDB Table Design
 
 **Table Name:** `Book-Appointment-Dynamo-Table`
+
+
+**Primary Key:** `appointmentID` (String)
 
 | Attribute | Data Type | Key Type | Description |
 |---|---|---|---|
