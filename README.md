@@ -64,3 +64,4 @@ flowchart TD
 | 404 | Requested route not found |
 | 409 | Appointment slot already booked |
 | 500 | Internal server error |
+## DynamoDB Table Design
