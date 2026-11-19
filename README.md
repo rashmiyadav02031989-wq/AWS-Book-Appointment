@@ -157,7 +157,12 @@ Verified that already-booked slots are rejected.
 
 ### Booking Appointment Scuccessful
 
-![Add APpointment DynamoDB Table](screenshotsBookedAppointment.png)
+![Add APpointment DynamoDB Table](screenshots/BookedAppointment.png) 
+
+### DynamoDB Table After Saving Appointment
+
+![Weekend Booking](screenshots/dynamodb_table.png)
+
 
 ### Weekend Booking
 
