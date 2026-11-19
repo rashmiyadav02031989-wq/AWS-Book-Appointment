@@ -179,7 +179,7 @@ Verified that already-booked slots are rejected.
 ```text
 cloud-file-flow/
 ├── lambda/
-│   └── cloud-file-flow-lambda.py
+│   └── Book-Appointment-lambda.py
 ├── screenshots/
 │   └── homepage.png
 │   └── file_selected_hello.png
