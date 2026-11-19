@@ -8,7 +8,6 @@ Users can select an appointment date, view available time slots, enter their det
 
 ---
 ## Live Demo : [AWS-Book-Appointment](https://d3g2wddbbs0bqk.cloudfront.net)
----
 
 ## Features
 
