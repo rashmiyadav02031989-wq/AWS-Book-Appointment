@@ -144,7 +144,7 @@ Tested appointment availability retrieval.
 Tested successful appointment booking. 
 
 Verified that already-booked slots are rejected. 
-```
+``
 ## Screenshots
 
 ### Website Homepage
