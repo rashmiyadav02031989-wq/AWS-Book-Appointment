@@ -151,21 +151,19 @@ Verified that already-booked slots are rejected.
 
 ![Website Homepage](screenshots/homepage.png)
 
-### Upload-File
+### Retrieve Available SLots For Given Date
 
-![Add Task](screenshots/file_selected_hello.png)
+![Available_Slots](screenshots/AvailableTimeSlots.png)
 
-### File Upload Scuccessful
+### Booking Appointment Scuccessful
 
-![Add Task DynamoDB Table](screenshots/uploaded.png)
+![Add APpointment DynamoDB Table](screenshotsBookedAppointment.png)
 
-### S3-Bucket-After-Upload
+### Weekend Booking
 
-![Mark Task Completed](screenshots/s3_bucket.png)
+![Weekend Booking](screenshots/WeekendBooking.png)
 
-### File-Upload-Completed-Dynamo-Table
 
-![Mark Task Completed Dynamo Table](screenshots/dynamo-table-uploaded.png)
 
 
 
