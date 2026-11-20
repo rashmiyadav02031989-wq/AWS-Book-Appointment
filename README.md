@@ -181,11 +181,12 @@ cloud-file-flow/
 ├── lambda/
 │   └── Book-Appointment-lambda.py
 ├── screenshots/
-│   └── homepage.png
-│   └── file_selected_hello.png
+│   └── AvailableTimeSlots.png
+│   └── BookedAppointment.png
 │   └── uploaded.png
-│   └── s3_bucket.png
-│   └── dynamo-table-uploaded.png
+│   └── WeekendBooking.png
+│   └── dynamodb-table.png
+│   └── homepage.png
 |__ website/
 │   └── index.html
 │   └── script.js
@@ -195,21 +196,19 @@ cloud-file-flow/
 ```
 ## Security Best Practices
 
-* Implemented a serverless architecture to minimize infrastructure management.
+* IAM Least Privilege: The Lambda execution role is configured to provide access to the required AWS resources. Permissions should be limited to the specific DynamoDB table and required actions.
 
-* Used API Gateway to provide an API endpoint for generating S3 presigned upload URLs.
+* S3 Bucket Protection: Amazon S3 Block Public Access is enabled to prevent direct public access to the frontend bucket.
 
-* Used presigned URLs to allow temporary, controlled access to upload files without exposing AWS credentials.
+* CloudFront Origin Access Control (OAC): CloudFront provides controlled access to the private S3 origin.
 
-* Configured CORS to allow browser requests from the frontend.
+* HTTPS Communication: Use HTTPS for communication between the browser, CloudFront, and API Gateway.
 
-* Used IAM roles and least-privilege permissions for AWS service access.
+* Input Validation: The Lambda function validates required appointment details, dates, and time slots before processing requests.
 
-* Stored file metadata in Amazon DynamoDB.
+* Error Handling: The application returns appropriate HTTP status codes and avoids exposing internal error details to users.
 
-* Used CloudFront to provide HTTPS delivery for the frontend.
-
-* Used Amazon SQS to decouple file uploads from asynchronous Lambda processing.
+* DynamoDB Access Control: Access to appointment records is managed through the Lambda execution role rather than exposing database access to the frontend.
 
 * Used Amazon CloudWatch Logs to monitor Lambda execution and troubleshoot errors.
 
