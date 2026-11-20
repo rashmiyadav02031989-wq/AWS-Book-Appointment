@@ -196,7 +196,7 @@ cloud-file-flow/
 ```
 ## Security Best Practices
 
-* IAM Least Privilege: The Lambda execution role is configured to provide access to the required AWS resources. Permissions should be limited to the specific DynamoDB table and required actions.
+* **IAM Least Privilege: The Lambda execution role is configured to provide access to the required AWS resources. Permissions should be limited to the specific DynamoDB table and required actions.
 
 * S3 Bucket Protection: Amazon S3 Block Public Access is enabled to prevent direct public access to the frontend bucket.
 
