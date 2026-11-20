@@ -196,21 +196,21 @@ cloud-file-flow/
 ```
 ## Security Best Practices
 
-* **IAM Least Privilege: The Lambda execution role is configured to provide access to the required AWS resources. Permissions should be limited to the specific DynamoDB table and required actions.
+* **IAM Least Privilege:** The Lambda execution role is configured to provide access to the required AWS resources. Permissions should be limited to the specific DynamoDB table and required actions.
 
-* S3 Bucket Protection: Amazon S3 Block Public Access is enabled to prevent direct public access to the frontend bucket.
+* **S3 Bucket Protection:** Amazon S3 Block Public Access is enabled to prevent direct public access to the frontend bucket.
 
-* CloudFront Origin Access Control (OAC): CloudFront provides controlled access to the private S3 origin.
+* **CloudFront Origin Access Control (OAC):** CloudFront provides controlled access to the private S3 origin.
 
-* HTTPS Communication: Use HTTPS for communication between the browser, CloudFront, and API Gateway.
+* **HTTPS Communication:** Use HTTPS for communication between the browser, CloudFront, and API Gateway.
 
-* Input Validation: The Lambda function validates required appointment details, dates, and time slots before processing requests.
+* **Input Validation:** The Lambda function validates required appointment details, dates, and time slots before processing requests.
 
-* Error Handling: The application returns appropriate HTTP status codes and avoids exposing internal error details to users.
+* **Error Handling:** The application returns appropriate HTTP status codes and avoids exposing internal error details to users.
 
-* DynamoDB Access Control: Access to appointment records is managed through the Lambda execution role rather than exposing database access to the frontend.
+* **DynamoDB Access Control:** Access to appointment records is managed through the Lambda execution role rather than exposing database access to the frontend.
 
-* Used Amazon CloudWatch Logs to monitor Lambda execution and troubleshoot errors.
+* **Amazon CloudWatch:** Used Cloudwatch Logs to monitor Lambda execution and troubleshoot errors.
 
 ---
 
