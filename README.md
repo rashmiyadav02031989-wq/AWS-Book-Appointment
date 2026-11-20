@@ -177,7 +177,7 @@ Verified that already-booked slots are rejected.
 ## Repository Structure
 
 ```text
-cloud-file-flow/
+AWS-Book-Appointment/
 ├── lambda/
 │   └── Book-Appointment-lambda.py
 ├── screenshots/
