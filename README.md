@@ -69,7 +69,7 @@ flowchart TD
 **Table Name:** `Book-Appointment-Dynamo-Table`
 
 
-**Primary Key:** `appointmentID` (String)
+**Primary Key:** `appointmentId` (String)
 
 | Attribute | Data Type | Key Type | Description |
 |---|---|---|---|
